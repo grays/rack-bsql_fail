@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/rack/bsql_fail.rb",
+     "rack-bsql_fail.gemspec",
      "test/rack/bsql_fail_test.rb",
      "test/test_helper.rb"
   ]
