@@ -12,6 +12,7 @@ module Rack #:nodoc:
       request = Rack::Request.new(env)
       if request.params.values.any? { |s| s =~ / and 1=[1,0]/ }
         response = 'GTFO'
+        headers["Content-Length"] = response.length.to_s
       end
       [status, headers, response]
     end
