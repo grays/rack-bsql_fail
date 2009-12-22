@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rack-bsql_fail}
-  s.version = "1.0.0"
+  s.version = "1.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jason L Perry"]
@@ -13,11 +13,13 @@ Gem::Specification.new do |s|
   s.description = %q{Security Metrics uses a flawed method to test for blind SQL injections, this middleware gives a dummy response to that test.}
   s.email = %q{jasper@ambethia.com}
   s.extra_rdoc_files = [
-    "LICENSE"
+    "LICENSE",
+     "README.md"
   ]
   s.files = [
     ".gitignore",
      "LICENSE",
+     "README.md",
      "Rakefile",
      "VERSION",
      "lib/rack/bsql_fail.rb",
