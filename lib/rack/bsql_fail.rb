@@ -1,5 +1,5 @@
 module Rack #:nodoc:
-  class BSQLFail < Struct.new :app, :routes
+  class BSQLFail < Struct.new :app, *:routes
 
     def call env
       return app.call(env) unless routes.include?(env["PATH_INFO"])

@@ -24,7 +24,7 @@ middleware gives a dummy response to that test.
 
     require 'rack/bsql_fail'
 
-    use Rack::BSQLFail, ['/path/being/tested', 'another/path']
+    use Rack::BSQLFail, '/path/being/tested', 'another/path/being/tested'
 
 ### Configuring in a Rails App ###
 

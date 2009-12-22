@@ -35,6 +35,6 @@ class Rack::GoogleAnalyticsTest < Test::Unit::TestCase
     opts[:content_type] ||= "text/html"
     opts[:body]         ||= [HTML_DOC]
     @app = lambda { |env| [200, { 'Content-Type' => opts[:content_type] }, opts[:body]] }
-    Rack::BSQLFail.new(@app, ["/search"])
+    Rack::BSQLFail.new(@app, "/search")
   end
 end
