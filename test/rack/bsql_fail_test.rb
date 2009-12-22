@@ -3,23 +3,23 @@ require 'rack/mock'
 
 class Rack::GoogleAnalyticsTest < Test::Unit::TestCase
 
-  def test_hikacks_response_for_query_a
+  def test_hijacks_response_for_query_a
     assert_equal 'GTFO', request('/search?query=+and+1%3D1').body
   end
 
-  def test_hikacks_response_for_query_b
+  def test_hijacks_response_for_query_b
     assert_equal 'GTFO', request('/search?query=+and+1%3D0').body
   end
 
-  def test_doesnt_hikack_response_other_queries_on_the_route
+  def test_doesnt_hijack_response_other_queries_on_the_route
     assert_equal HTML_DOC, request('/search?query=foo').body
   end
 
-  def test_doesnt_hikack_response_for_other_routes
+  def test_doesnt_hijack_response_for_other_routes
     assert_equal HTML_DOC, request('/foo?bar=+and+1%3D1').body
   end
 
-  def test_doesnt_hikack_response_for_anything_else
+  def test_doesnt_hijack_response_for_anything_else
     assert_equal HTML_DOC, request.body
   end
 
